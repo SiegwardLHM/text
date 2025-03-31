@@ -1,0 +1,145 @@
+{
+  "moldData": [
+    {
+      "id": 1,
+      "serialNumber": "CM20230001",
+      "inspectionTime": "2023-07-23 10:15:32",
+      "status": "qualified",
+      "parameters": {
+        "size": 92.5,
+        "smoothness": 98.3,
+        "integrity": 95.1,
+        "hardness": 87.6
+      },
+      "inspector": "张三",
+      "notes": "正常生产批次"
+    },
+    {
+      "id": 2,
+      "serialNumber": "CM20230002",
+      "inspectionTime": "2023-07-23 10:25:17",
+      "status": "qualified",
+      "parameters": {
+        "size": 91.8,
+        "smoothness": 97.5,
+        "integrity": 94.8,
+        "hardness": 88.2
+      },
+      "inspector": "张三",
+      "notes": "正常生产批次"
+    },
+    {
+      "id": 3,
+      "serialNumber": "CM20230003",
+      "inspectionTime": "2023-07-23 10:36:45",
+      "status": "unqualified",
+      "parameters": {
+        "size": 86.2,
+        "smoothness": 82.3,
+        "integrity": 79.4,
+        "hardness": 88.7
+      },
+      "inspector": "李四",
+      "notes": "表面光滑度不足，结构完整性低于标准"
+    },
+    {
+      "id": 4,
+      "serialNumber": "CM20230004",
+      "inspectionTime": "2023-07-23 10:48:22",
+      "status": "qualified",
+      "parameters": {
+        "size": 93.1,
+        "smoothness": 98.7,
+        "integrity": 96.2,
+        "hardness": 89.1
+      },
+      "inspector": "李四",
+      "notes": "正常生产批次"
+    },
+    {
+      "id": 5,
+      "serialNumber": "CM20230005",
+      "inspectionTime": "2023-07-23 11:03:11",
+      "status": "qualified",
+      "parameters": {
+        "size": 92.8,
+        "smoothness": 98.1,
+        "integrity": 95.3,
+        "hardness": 87.9
+      },
+      "inspector": "王五",
+      "notes": "正常生产批次"
+    }
+  ],
+  "equipmentStatus": [
+    {
+      "id": 1,
+      "code": "XS0163420",
+      "name": "监控摄像头A区",
+      "status": "normal",
+      "runtime": 671,
+      "lastMaintenance": "2023-06-15",
+      "nextMaintenance": "2023-08-15"
+    },
+    {
+      "id": 2,
+      "code": "XQ1630217",
+      "name": "检测设备B区",
+      "status": "normal",
+      "runtime": 243,
+      "lastMaintenance": "2023-07-05",
+      "nextMaintenance": "2023-09-05"
+    },
+    {
+      "id": 3,
+      "code": "XP2105457",
+      "name": "压力监测器C区",
+      "status": "normal",
+      "runtime": 330,
+      "lastMaintenance": "2023-06-30",
+      "nextMaintenance": "2023-08-30"
+    },
+    {
+      "id": 4,
+      "code": "XS0165420",
+      "name": "监控摄像头D区",
+      "status": "warning",
+      "runtime": 745,
+      "lastMaintenance": "2023-05-20",
+      "nextMaintenance": "2023-07-20",
+      "warningMessage": "已超过预定维护时间"
+    }
+  ],
+  "personnelData": {
+    "onDuty": 9,
+    "offDuty": 2,
+    "total": 11,
+    "departmentDistribution": [
+      {
+        "name": "技术部",
+        "count": 3
+      },
+      {
+        "name": "生产部",
+        "count": 4
+      },
+      {
+        "name": "质检部",
+        "count": 2
+      },
+      {
+        "name": "物流部",
+        "count": 1
+      },
+      {
+        "name": "研发部",
+        "count": 1
+      }
+    ],
+    "attendance": {
+      "normal": 8,
+      "late": 1,
+      "leave": 2
+    }
+  }
+} 

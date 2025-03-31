@@ -1,0 +1,39 @@
+0 verbose cli D:\Node\node.exe D:\Node\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:D:\Node\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\HP\AppData\Local\Microsoft\TypeScript\5.7\.npmrc
+5 silly config load:file:C:\Users\HP\.npmrc
+6 silly config load:file:D:\Node\node_global\etc\npmrc
+7 verbose title npm install types-registry@latest
+8 verbose argv "install" "--ignore-scripts" "types-registry@latest"
+9 verbose logfile logs-max:10 dir:D:\用户\HP\桌面\text\npm-cache\_logs\2025-03-28T06_45_21_746Z-
+10 verbose logfile D:\用户\HP\桌面\text\npm-cache\_logs\2025-03-28T06_45_21_746Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/types-registry cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/types-registry 611ms (cache updated)
+16 silly packumentCache corgi:https://registry.npmjs.org/types-registry set size:undefined disposed:false
+17 silly idealTree buildDeps
+18 silly fetch manifest types-registry@0.1.713
+19 silly packumentCache full:https://registry.npmjs.org/types-registry cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/types-registry 203ms (cache updated)
+21 silly packumentCache full:https://registry.npmjs.org/types-registry set size:undefined disposed:false
+22 silly placeDep ROOT types-registry@0.1.713 REPLACE for:  want: 0.1.713
+23 silly reify moves {}
+24 silly audit bulk request {
+24 silly audit   '@types/core-js': [ '2.5.8' ],
+24 silly audit   '@types/less': [ '3.0.8' ],
+24 silly audit   '@types/node': [ '22.13.13' ],
+24 silly audit   'undici-types': [ '6.20.0' ],
+24 silly audit   'types-registry': [ '0.1.713' ]
+24 silly audit }
+25 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 247ms
+26 silly audit report {}
+27 verbose cwd C:\Users\HP\AppData\Local\Microsoft\TypeScript\5.7
+28 verbose os Windows_NT 10.0.22631
+29 verbose node v22.14.0
+30 verbose npm  v10.9.2
+31 verbose exit 0
+32 info ok

@@ -1,0 +1,18 @@
+0 verbose cli D:\Node\node.exe D:\Node\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:D:\Node\node_modules\npm\npmrc
+4 silly config load:file:D:\用户\HP\桌面\text\.npmrc
+5 silly config load:file:C:\Users\HP\.npmrc
+6 silly config load:file:D:\Node\node_global\etc\npmrc
+7 verbose title npm runserve
+8 verbose argv "runserve"
+9 verbose logfile logs-max:10 dir:D:\用户\HP\桌面\text\npm-cache\_logs\2025-03-28T06_52_35_266Z-
+10 verbose logfile D:\用户\HP\桌面\text\npm-cache\_logs\2025-03-28T06_52_35_266Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 verbose cwd D:\用户\HP\桌面\text
+13 verbose os Windows_NT 10.0.22631
+14 verbose node v22.14.0
+15 verbose npm  v10.9.2
+16 verbose exit 1
+17 verbose code 1

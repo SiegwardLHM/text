@@ -1,0 +1,47 @@
+0 verbose cli D:\Node\node.exe D:\Node\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:D:\Node\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\HP\AppData\Local\Microsoft\TypeScript\5.7\.npmrc
+5 silly config load:file:C:\Users\HP\.npmrc
+6 silly config load:file:D:\Node\node_global\etc\npmrc
+7 verbose title npm install @types/core-js@ts5.7 @types/less@ts5.7
+8 verbose argv "install" "--ignore-scripts" "@types/core-js@ts5.7" "@types/less@ts5.7" "--save-dev" "--user-agent" "typesInstaller/5.7.2"
+9 verbose logfile logs-max:10 dir:D:\用户\HP\桌面\text\npm-cache\_logs\2025-03-28T06_45_32_501Z-
+10 verbose logfile D:\用户\HP\桌面\text\npm-cache\_logs\2025-03-28T06_45_32_501Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcore-js cache-miss
+15 silly packumentCache corgi:https://registry.npmjs.org/@types%2fless cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@types%2fcore-js 397ms (cache updated)
+17 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcore-js set size:undefined disposed:false
+18 http fetch GET 200 https://registry.npmjs.org/@types%2fless 398ms (cache updated)
+19 silly packumentCache corgi:https://registry.npmjs.org/@types%2fless set size:undefined disposed:false
+20 silly idealTree buildDeps
+21 silly fetch manifest @types/core-js@2.5.8
+22 silly packumentCache full:https://registry.npmjs.org/@types%2fcore-js cache-miss
+23 http fetch GET 200 https://registry.npmjs.org/@types%2fcore-js 205ms (cache updated)
+24 silly packumentCache full:https://registry.npmjs.org/@types%2fcore-js set size:undefined disposed:false
+25 silly fetch manifest @types/less@3.0.8
+26 silly packumentCache full:https://registry.npmjs.org/@types%2fless cache-miss
+27 http fetch GET 200 https://registry.npmjs.org/@types%2fless 126ms (cache updated)
+28 silly packumentCache full:https://registry.npmjs.org/@types%2fless set size:undefined disposed:false
+29 silly placeDep ROOT @types/core-js@2.5.8 REPLACE for:  want: 2.5.8
+30 silly placeDep ROOT @types/less@3.0.8 REPLACE for:  want: 3.0.8
+31 silly reify moves {}
+32 silly audit bulk request {
+32 silly audit   '@types/node': [ '22.13.13' ],
+32 silly audit   'types-registry': [ '0.1.713' ],
+32 silly audit   'undici-types': [ '6.20.0' ],
+32 silly audit   '@types/core-js': [ '2.5.8' ],
+32 silly audit   '@types/less': [ '3.0.8' ]
+32 silly audit }
+33 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 280ms
+34 silly audit report {}
+35 verbose cwd C:\Users\HP\AppData\Local\Microsoft\TypeScript\5.7
+36 verbose os Windows_NT 10.0.22631
+37 verbose node v22.14.0
+38 verbose npm  v10.9.2
+39 verbose exit 0
+40 info ok
