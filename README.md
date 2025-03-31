@@ -1,6 +1,6 @@
 # 胶囊模具数字化检测系统
 
-这是一个基于Vue.js开发的胶囊模具数字化检测系统，用于实现胶囊模具的生产过程监控、缺陷检测等功能。
+这是一个基于 Vue.js 开发的胶囊模具数字化检测系统，用于实现胶囊模具的生产过程监控、缺陷检测等功能。
 
 ## 功能特点
 
@@ -13,29 +13,58 @@
 
 ## 技术栈
 
-- Vue.js 2.x
-- Element UI
-- ECharts
-- Vuex
-- Vue Router
-- Axios
+- 前端：
+  - Vue.js 2.x
+  - Element UI
+  - ECharts
+  - Vuex
+  - Vue Router
+  - Axios
+
+- 后端：
+  - Node.js
+  - json-server
+  - RESTful API
+
+## 环境要求
+
+- Node.js >= 16.0.0
+- npm >= 8.0.0
 
 ## 安装和运行
 
-1. 安装依赖：
+1. **克隆项目**：
 ```bash
-npm install
+git clone [项目地址]
+cd [项目目录]
 ```
 
-2. 开发环境运行：
+2. **安装依赖**：
 ```bash
+# 安装项目依赖
+npm install
+
+# 安装 json-server
+npm install json-server@0.17.4 --save
+```
+
+3. **启动后端服务**：
+```bash
+# 启动 json-server
+node server.js
+```
+
+4. **启动前端服务**：
+```bash
+# 在新的终端窗口中运行
 npm run serve
 ```
 
-3. 生产环境构建：
-```bash
-npm run build
-```
+5. **访问系统**：
+- 打开浏览器访问 `http://localhost:8080`
+- 默认管理员账号：
+  - 用户名：`admin`
+  - 密码：`123456`
 
 ## 项目结构
 
@@ -49,6 +78,8 @@ npm run build
 │   ├── App.vue           # 根组件
 │   └── main.js           # 入口文件
 ├── public/                # 公共资源目录
+├── server.js             # 后端服务配置
+├── db.json               # 数据存储文件
 └── vue.config.js         # Vue CLI 配置文件
 ```
 
@@ -72,9 +103,18 @@ npm run build
    - 视频监控
 
 4. **人员管理**
-   - 人员在岗管理
+   - 用户在岗管理
    - 权限控制
    - 操作日志
+
+## API 接口
+
+- POST `/login` - 用户登录
+- POST `/register` - 用户注册
+- GET `/users` - 获取所有用户
+- GET `/users/:id` - 获取单个用户
+- PUT `/users/:id` - 更新用户信息
+- DELETE `/users/:id` - 删除用户
 
 ## 开发团队
 
@@ -86,12 +126,16 @@ npm run build
 ## 注意事项
 
 1. 开发环境要求：
-   - Node.js >= 12.0.0
-   - npm >= 6.0.0
+   - Node.js >= 16.0.0
+   - npm >= 8.0.0
 
 2. 配置要求：
    - 需要配置工业相机SDK
    - 需要配置后端服务API地址
+
+3. 数据存储：
+   - 用户数据存储在 `db.json` 文件中
+   - 支持数据持久化
 
 ## 版权信息
 
