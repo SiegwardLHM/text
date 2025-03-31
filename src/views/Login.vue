@@ -170,29 +170,30 @@ export default {
         if (valid) {
           this.loading = true;
           
-          // 模拟登录请求，实际项目中应调用API
-          setTimeout(() => {
-            // 创建一个用户对象
-            const user = {
-              id: 1,
-              username: this.loginForm.username,
-              realname: '测试用户',
-              department: '技术部',
-              avatar: 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png',
-              role: 'admin',
-              token: 'mock-token-' + Date.now()
-            };
-            
-            // 存储到Vuex和localStorage
-            this.$store.commit('setUser', user);
-            if (this.loginForm.remember) {
-              localStorage.setItem('user', JSON.stringify(user));
+          // 调用后端登录API
+          this.$axios.post('/login', {
+            username: this.loginForm.username,
+            password: this.loginForm.password
+          })
+          .then(response => {
+            if (response.data.success) {
+              const user = response.data.user;
+              this.$store.commit('setUser', user);
+              if (this.loginForm.remember) {
+                localStorage.setItem('user', JSON.stringify(user));
+              }
+              this.$message.success('登录成功');
+              this.$router.push('/dashboard');
+            } else {
+              this.$message.error(response.data.message);
             }
-            
+          })
+          .catch(error => {
+            this.$message.error('登录失败：' + error.message);
+          })
+          .finally(() => {
             this.loading = false;
-            this.$message.success('登录成功');
-            this.$router.push('/dashboard');
-          }, 1000);
+          });
         }
       });
     },
@@ -201,27 +202,30 @@ export default {
         if (valid) {
           this.loading = true;
           
-          // 模拟注册请求，实际项目中应调用API
-          setTimeout(() => {
-            // 创建一个用户对象
-            const user = {
-              id: Date.now(),
-              username: this.registerForm.username,
-              realname: this.registerForm.realname,
-              department: this.registerForm.department,
-              avatar: 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png',
-              role: 'user',
-              token: 'mock-token-' + Date.now()
-            };
-            
-            // 存储到Vuex和localStorage
-            this.$store.commit('setUser', user);
-            localStorage.setItem('user', JSON.stringify(user));
-            
+          // 调用后端注册API
+          this.$axios.post('/register', {
+            username: this.registerForm.username,
+            password: this.registerForm.password,
+            realname: this.registerForm.realname,
+            department: this.registerForm.department
+          })
+          .then(response => {
+            if (response.data.success) {
+              const user = response.data.user;
+              this.$store.commit('setUser', user);
+              localStorage.setItem('user', JSON.stringify(user));
+              this.$message.success('注册成功，已自动登录');
+              this.$router.push('/dashboard');
+            } else {
+              this.$message.error(response.data.message);
+            }
+          })
+          .catch(error => {
+            this.$message.error('注册失败：' + error.message);
+          })
+          .finally(() => {
             this.loading = false;
-            this.$message.success('注册成功，已自动登录');
-            this.$router.push('/dashboard');
-          }, 1000);
+          });
         }
       });
     }
