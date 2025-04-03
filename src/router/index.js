@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store'
+import Production from '@/views/Production.vue'
 
 Vue.use(VueRouter)
 
@@ -78,6 +79,15 @@ const routes = [
     component: () => import('../views/DefectDetection.vue'),
     meta: { 
       title: '模具缺陷检测',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/production',
+    name: 'Production',
+    component: Production,
+    meta: {
+      title: '生产线模拟',
       requiresAuth: true
     }
   },

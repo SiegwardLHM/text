@@ -14,11 +14,15 @@
       class="menu"
     >
       <el-menu-item index="/dashboard">安全生产监管平台</el-menu-item>
+      <el-submenu index="production">
+        <template slot="title">生产监控</template>
+        <el-menu-item index="/production">生产线模拟</el-menu-item>
+        <el-menu-item index="/process-animation">溶胶蘸胶过程</el-menu-item>
+        <el-menu-item index="/defect-detection">模具缺陷检测</el-menu-item>
+      </el-submenu>
       <el-menu-item index="/equipment">设备监测大屏</el-menu-item>
       <el-menu-item index="/video">视频监控平台</el-menu-item>
       <el-menu-item index="/personnel">人员在岗管理</el-menu-item>
-      <el-menu-item index="/process-animation">溶胶蘸胶过程动画</el-menu-item>
-      <el-menu-item index="/defect-detection">模具缺陷检测</el-menu-item>
     </el-menu>
     <div class="user-info" v-if="user">
       <span class="username">{{ user.realname }}</span>
@@ -158,5 +162,34 @@ export default {
 
 ::v-deep .el-menu--horizontal > .el-menu-item:hover {
   background-color: rgba(64, 158, 255, 0.1) !important;
+}
+
+/* 添加子菜单样式 */
+::v-deep .el-menu--horizontal .el-submenu .el-submenu__title {
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+}
+
+::v-deep .el-menu--horizontal .el-submenu .el-submenu__title:hover {
+  background-color: rgba(64, 158, 255, 0.1) !important;
+}
+
+::v-deep .el-menu--horizontal .el-submenu.is-active .el-submenu__title {
+  border-bottom: 2px solid #409EFF;
+}
+
+/* 下拉菜单样式 */
+::v-deep .el-menu--popup {
+  background-color: rgba(0, 10, 50, 0.95) !important;
+}
+
+::v-deep .el-menu--popup .el-menu-item {
+  color: #fff;
+}
+
+::v-deep .el-menu--popup .el-menu-item:hover,
+::v-deep .el-menu--popup .el-menu-item.is-active {
+  background-color: rgba(64, 158, 255, 0.2) !important;
 }
 </style> 
